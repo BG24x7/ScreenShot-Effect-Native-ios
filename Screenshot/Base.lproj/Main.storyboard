@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Screenshot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="o45-TU-C35">
+                                <rect key="frame" x="0.0" y="44" width="414" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="ke7-iQ-hPF"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IYg-ft-VXS">
+                                <rect key="frame" x="25" y="394" width="364" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="Gbf-DF-qlC"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Take Screenshot"/>
+                                <connections>
+                                    <action selector="takeScreenshot:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TvC-Rw-cvT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IYg-ft-VXS" firstAttribute="top" secondItem="o45-TU-C35" secondAttribute="bottom" constant="50" id="6gz-q2-rqI"/>
+                            <constraint firstItem="o45-TU-C35" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="T9D-7X-dLt"/>
+                            <constraint firstItem="IYg-ft-VXS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="TqX-j7-CPv"/>
+                            <constraint firstItem="o45-TU-C35" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="npi-1L-Whi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IYg-ft-VXS" secondAttribute="trailing" constant="25" id="yRM-uP-TvG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="o45-TU-C35" secondAttribute="trailing" id="zLJ-dh-nM5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageForSS" destination="o45-TU-C35" id="KNY-GV-dS7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="83"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Image" width="1133.5" height="793.5"/>
+    </resources>
+</document>
